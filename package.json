@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/weswhitney/denver-parks/issues"
   },
-  "homepage": "https://github.com/weswhitney/denver-parks#readme"
+  "homepage": "https://github.com/weswhitney/denver-parks#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
