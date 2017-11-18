@@ -1,0 +1,25 @@
+{
+  "name": "parks-and-skateparks",
+  "version": "1.0.0",
+  "description": "information about parks, skateparks, and park restrooms in Denver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weswhitney/denver-parks.git"
+  },
+  "keywords": [
+    "parks",
+    "skateparks",
+    "restrooms",
+    "denver"
+  ],
+  "author": "Wesley Whitney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weswhitney/denver-parks/issues"
+  },
+  "homepage": "https://github.com/weswhitney/denver-parks#readme"
+}
