@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
+const engines = require('consolidate'); // consolidate is a wrapper for template interfaces
+
+app.engine('html', engines.nunjucks);// register the nunjucks template, associating it with the html extensions
+app.set('view engine', 'html');// set the view engine app setting to html meaning were going to use the nunjucks engine to render html
+app.set('views', __dirname + '/views'); // specify where are templates are located
+
 
 app.get('/', function (req, res) {
-    res.send('hello world');
+    res.render('hello', {'name': 'templates'});
 });
-
+// fall through for routes that aren't specified'
 app.use(function (req, res) {
     res.sendStatus(404);
 });
