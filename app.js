@@ -10,7 +10,7 @@ const assert = require('assert');
 
 app.engine('html', engines.nunjucks);// register the nunjucks template, associating it with the html extensions
 app.set('view engine', 'html');// set the view engine app setting to html meaning were going to use the nunjucks engine to render html
-app.set('views', __dirname + '/views'); // specify where are templates are located
+app.set('views', __dirname + '/views'); // specify where our templates are located
 
 
 app.get('/', function (req, res) {
