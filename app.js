@@ -10,8 +10,13 @@ app.set('view engine', 'html');// set the view engine app setting to html meanin
 app.set('views', __dirname + '/views'); // specify where our templates are located
 
 MongoClient.connect('mongodb://localhost:27017/parks', function(err, db) {
-    app.get('/', function (req, res) {
-        res.render('hello', {'name': 'templates'});
+    app.get('/',function (req, res) {
+        res.render('hello', {name: 'templates'})
+    })
+    app.get('/playgrounds', function (req, res) {
+        db.collection('playgrounds').find({}).toArray(function (err, docs) {
+            res.render('playgrounds', { 'playgrounds': docs});
+        });
     });
 // fall through for routes that aren't specified'
     app.use(function (req, res) {

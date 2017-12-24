@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>playgrounds</title>
+</head>
+<body>
+    <h1>playgrounds</h1>
+    {% for playground in playgrounds%}
+        <li>{{playground.LOCATION}}</li>
+    {% else %}
+        <li>No movies found.</li>
+    {% endfor %}
+
+</body>
+</html>
