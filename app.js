@@ -9,7 +9,12 @@ app.engine('html', engines.nunjucks);// register the nunjucks template, associat
 app.set('view engine', 'html');// set the view engine app setting to html meaning were going to use the nunjucks engine to render html
 app.set('views', __dirname + '/views'); // specify where our templates are located
 
-MongoClient.connect('mongodb://localhost:27017/parks', function(err, db) {
+var herokuUri;
+var localUri;
+localUri = 'mongodb://localhost:27017/parks'
+herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.com:13566/heroku_vxdmqrm5';
+
+MongoClient.connect(localUri, function(err, db) {
     app.get('/',function (req, res) {
         res.render('hello', {name: 'templates'})
     })
