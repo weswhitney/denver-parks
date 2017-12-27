@@ -11,10 +11,10 @@ app.set('views', __dirname + '/views'); // specify where our templates are locat
 
 var herokuUri;
 var localUri;
-localUri = 'mongodb://localhost:27017/parks'
+localUri = 'mongodb://localhost:27017/parks';
 herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.com:13566/heroku_vxdmqrm5';
 
-MongoClient.connect(localUri, function(err, db) {
+MongoClient.connect(herokuUri, function(err, db) {
     app.get('/',function (req, res) {
         res.render('hello', {name: 'templates'})
     })
