@@ -16,8 +16,8 @@ herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.
 
 MongoClient.connect(herokuUri, function(err, db) {
     app.get('/',function (req, res) {
-        res.render('hello', {name: 'templates'})
-    })
+        res.render('hello', {name: 'templates'});
+    });
     app.get('/playgrounds', function (req, res) {
         db.collection('playgrounds').find({}).toArray(function (err, docs) {
             res.render('playgrounds', { 'playgrounds': docs});
