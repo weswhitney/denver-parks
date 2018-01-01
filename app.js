@@ -23,6 +23,9 @@ MongoClient.connect(herokuUri, function(err, db) {
             res.render('playgrounds', { 'playgrounds': docs});
         });
     });
+    app.get('/skateparks', function (req,res) {
+        res.render('skateparks');
+    });
 // fall through for routes that aren't specified'
     app.use(function (req, res) {
         res.sendStatus(404);
