@@ -7,6 +7,11 @@
     <title>Skateparks</title>
 </head>
 <body>
-<h1>skateparks</h1>
+    <h1>skateparks</h1>
+    {% for skatepark in skateParks %}
+        <li>{{skatepark.LOCATION}}</li>
+    {% else %}
+        <h1>no results</h1>
+    {% endfor %}
 </body>
 </html>

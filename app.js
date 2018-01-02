@@ -14,7 +14,7 @@ var localUri;
 localUri = 'mongodb://localhost:27017/parks';
 herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.com:13566/heroku_vxdmqrm5';
 
-MongoClient.connect(herokuUri, function(err, db) {
+MongoClient.connect(localUri, function(err, db) {
     app.get('/',function (req, res) {
         res.render('hello', {name: 'templates'});
     });
@@ -23,8 +23,10 @@ MongoClient.connect(herokuUri, function(err, db) {
             res.render('playgrounds', { 'playgrounds': docs});
         });
     });
-    app.get('/skateparks', function (req,res) {
-        res.render('skateparks');
+    app.get('/skateparks', function (req, res) {
+        db.collection('skateParks').find({}).toArray(function (err, docs) {
+            res.render('skateparks', { 'skateParks' : docs});
+        });
     });
 // fall through for routes that aren't specified'
     app.use(function (req, res) {
