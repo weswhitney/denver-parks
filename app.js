@@ -13,28 +13,28 @@ app.set('views', __dirname + '/views'); // specify where our templates are locat
 const localUri = 'mongodb://localhost:27017/parks';
 const herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.com:13566/heroku_vxdmqrm5';
 
-MongoClient.connect(herokuUri, function(err, db) {
+MongoClient.connect(herokuUri, (err, db) => {
     app.get('/',function (req, res) {
         res.render('hello', {name: 'templates'});
     });
-    app.get('/playgrounds', function (req, res) {
-        db.collection('playgrounds').find({}).toArray(function (err, docs) {
+    app.get('/playgrounds', (req, res) => {
+        db.collection('playgrounds').find({}).toArray((err, docs) => {
             res.render('playgrounds', { 'playgrounds': docs});
         });
     });
-    app.get('/skateparks', function (req, res) {
-        db.collection('skateParks').find({}).toArray(function (err, docs) {
+    app.get('/skateparks', (req, res) => {
+        db.collection('skateParks').find({}).toArray((err, docs) => {
             res.render('skateparks', { 'skateParks' : docs});
         });
     });
 // fall through for routes that aren't specified'
-    app.use(function (req, res) {
+    app.use((req, res) => {
         res.sendStatus(404);
     });
 
     let port;
     port = process.env.PORT || 3000;
-    app.listen(port, function () {
+    app.listen(port, () => {
     console.log('Express server listening on ', port);
     });
 });
