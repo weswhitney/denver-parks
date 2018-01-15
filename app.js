@@ -5,8 +5,8 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 
-app.engine('html', engines.nunjucks);// register the nunjucks template, associating it with the html extensions
-app.set('view engine', 'html');// set the view engine app setting to html meaning were going to use the nunjucks engine to render html
+app.engine('pug', require('pug').__express);// register the nunjucks template, associating it with the html extensions
+app.set('view engine', 'pug');// set the view engine app setting to html meaning were going to use the nunjucks engine to render html
 app.set('views', __dirname + '/views'); // specify where our templates are located
 
 
