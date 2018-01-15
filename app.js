@@ -10,11 +10,11 @@ app.set('view engine', 'html');// set the view engine app setting to html meanin
 app.set('views', __dirname + '/views'); // specify where our templates are located
 
 
-const localUri = 'mongodb://localhost:27017/parks';
+const localUri = 'mongodb://localhost:27017/parks'; // don't need this anymore because it hits the prod heroku db.
 const herokuUri = 'mongodb://heroku_vxdmqrm5:h2dh7j5i28ljk7fq86nubhpk1v@ds113566.mlab.com:13566/heroku_vxdmqrm5';
 
 MongoClient.connect(herokuUri, (err, db) => {
-    app.get('/',function (req, res) {
+    app.get('/', (req, res) => {
         res.render('hello', {name: 'templates'});
     });
     app.get('/playgrounds', (req, res) => {
