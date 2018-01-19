@@ -13,7 +13,7 @@ app.engine('pug', require('pug').__express);
 // set the view engine app setting to pug meaning were going to use the pug engine to render html
 app.set('view engine', 'pug');
 // specify where our templates are located
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/public/views');
 
 /*
  don't need this anymore because it hits the prod heroku db.
