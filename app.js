@@ -15,6 +15,8 @@ app.set('view engine', 'pug');
 // specify where our templates are located
 app.set('views', __dirname + '/public/views');
 
+// app.use(require('./playground'));
+
 /*
  don't need this anymore because it hits the prod heroku db.
  const localUri = 'mongodb://localhost:27017/parks';
@@ -27,12 +29,12 @@ MongoClient.connect(herokuUri, (err, db) => {
     });
     app.get('/playgrounds', (req, res) => {
         db.collection('playgrounds').find({}).toArray((err, docs) => {
-            res.render('playgrounds', { 'playgrounds': docs});
+            res.json({ 'playgrounds': docs});
         });
     });
     app.get('/skateparks', (req, res) => {
         db.collection('skateParks').find({}).toArray((err, docs) => {
-            res.render('skateparks', { 'skateParks' : docs});
+            res.json({ 'skateParks' : docs});
         });
     });
 // fall through for routes that aren't specified'
