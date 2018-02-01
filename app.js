@@ -37,7 +37,7 @@ MongoClient.connect(herokuUri, (err, db) => {
             res.json({ 'skateParks' : docs});
         });
     });
-// fall through for routes that aren't specified'
+    // fall through for routes that aren't specified'
     app.use((req, res) => {
         res.sendStatus(404);
     });
