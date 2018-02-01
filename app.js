@@ -13,7 +13,7 @@ app.engine('pug', require('pug').__express);
 // set the view engine app setting to pug meaning were going to use the pug engine to render html
 app.set('view engine', 'pug');
 // specify where our templates are located
-app.set('views', __dirname + '/public/views');
+app.set('views', __dirname + '/client/public/views');
 
 // app.use(require('./playground'));
 
@@ -29,12 +29,12 @@ MongoClient.connect(herokuUri, (err, db) => {
     });
     app.get('/playgrounds', (req, res) => {
         db.collection('playgrounds').find({}).toArray((err, docs) => {
-            res.json({ 'playgrounds': docs});
+            res.render('playgrounds', { 'playgrounds': docs});
         });
     });
     app.get('/skateparks', (req, res) => {
         db.collection('skateParks').find({}).toArray((err, docs) => {
-            res.json({ 'skateParks' : docs});
+            res.render('skateParks', { 'skateParks' : docs});
         });
     });
     // fall through for routes that aren't specified'
