@@ -1,7 +1,5 @@
 const express = require('express');
 const app = express();
-// consolidate is a wrapper for template interfaces
-// const engines = require('consolidate');
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
