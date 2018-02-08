@@ -10,16 +10,7 @@ class Playgrounds extends Component {
         };
     }
     componentDidMount() {
-        // fetch(`http://localhost:3001/playgrounds`, {'mode': 'no-cors'})
-            // .then(response => console.log("response ok? "
-            //     + response.ok + " status code "
-            //     + response.status + " status "
-            //     + response.statusText + "type "
-            //     + response.type + "body"
-            //     + response.bodyUsed))
-            // .then(response => console.log('success' + response));
         fetch('http://localhost:3001/playgrounds', {
-                // mode: 'no-cors',
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',
