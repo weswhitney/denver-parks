@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
+const cors = require('cors');
+
+app.use(cors());
 
 app.set("port", process.env.PORT || 3001);
 
