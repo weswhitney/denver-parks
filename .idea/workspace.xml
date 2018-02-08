@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3e6965-49a7-4ae2-b964-05f1970573a4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Playgrounds.js" afterPath="$PROJECT_DIR$/client/src/Playgrounds.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,10 +64,10 @@
             <state relative-caret-position="75">
               <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding>
-                <marker date="1518062944921" expanded="true" signature="121:228" ph="{&quot;concurrently&quot;: &quot;^3.5.1&quot;...}" />
-                <marker date="1518062944921" expanded="true" signature="268:468" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
-                <marker date="1518062944921" expanded="true" signature="486:574" ph="{&quot;type&quot;: &quot;git&quot;...}" />
-                <marker date="1518062944921" expanded="true" signature="636:704" ph="{&quot;url&quot;: &quot;https://github.com/weswhitney/denver-parks/issues&quot;...}" />
+                <marker date="1518063260876" expanded="true" signature="121:228" ph="{&quot;concurrently&quot;: &quot;^3.5.1&quot;...}" />
+                <marker date="1518063260876" expanded="true" signature="268:468" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+                <marker date="1518063260876" expanded="true" signature="486:574" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+                <marker date="1518063260876" expanded="true" signature="636:704" ph="{&quot;url&quot;: &quot;https://github.com/weswhitney/denver-parks/issues&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -87,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Playgrounds.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Playgrounds.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Playgrounds.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -95,6 +91,16 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,13 +188,13 @@
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/start-client.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/src/Client.js" />
-        <option value="$PROJECT_DIR$/client/src/Playgrounds.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/client/src/Playgrounds.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -246,24 +252,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="denver-parks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="denver-parks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,12 +680,12 @@
       <workItem from="1514913160276" duration="998000" />
       <workItem from="1515612015094" duration="5566000" />
       <workItem from="1516079006808" duration="10994000" />
-      <workItem from="1517450516413" duration="44797000" />
+      <workItem from="1517450516413" duration="44948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78720000" />
+    <option name="totallyTimeSpent" value="78871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
@@ -986,8 +974,8 @@
         <state relative-caret-position="-2835">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518062944947" expanded="true" signature="17903:17911" ph="{&quot;version&quot;: &quot;1.3.1&quot;...}" />
-            <marker date="1518062944947" expanded="true" signature="17903:18733" ph="{...}" />
+            <marker date="1518063260875" expanded="true" signature="17903:17911" ph="{&quot;version&quot;: &quot;1.3.1&quot;...}" />
+            <marker date="1518063260875" expanded="true" signature="17903:18733" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -996,14 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1047,10 +1027,10 @@
         <state relative-caret-position="75">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
-            <marker date="1518062944921" expanded="true" signature="121:228" ph="{&quot;concurrently&quot;: &quot;^3.5.1&quot;...}" />
-            <marker date="1518062944921" expanded="true" signature="268:468" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
-            <marker date="1518062944921" expanded="true" signature="486:574" ph="{&quot;type&quot;: &quot;git&quot;...}" />
-            <marker date="1518062944921" expanded="true" signature="636:704" ph="{&quot;url&quot;: &quot;https://github.com/weswhitney/denver-parks/issues&quot;...}" />
+            <marker date="1518063260876" expanded="true" signature="121:228" ph="{&quot;concurrently&quot;: &quot;^3.5.1&quot;...}" />
+            <marker date="1518063260876" expanded="true" signature="268:468" ph="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+            <marker date="1518063260876" expanded="true" signature="486:574" ph="{&quot;type&quot;: &quot;git&quot;...}" />
+            <marker date="1518063260876" expanded="true" signature="636:704" ph="{&quot;url&quot;: &quot;https://github.com/weswhitney/denver-parks/issues&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1112,6 +1092,14 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
