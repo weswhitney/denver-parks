@@ -1,41 +1,29 @@
 {
-  "name": "parks-and-skateparks",
+  "name": "denver-parks",
   "version": "1.0.0",
-  "description": "information about parks, skateparks, and park restrooms in Denver",
-  "main": "app.js",
+  "description": "parks api",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.2"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weswhitney/denver-parks.git"
   },
-  "keywords": [
-    "parks",
-    "skateparks",
-    "restrooms",
-    "denver"
-  ],
-  "author": "Wesley Whitney",
+  "author": "wesley whitney",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/weswhitney/denver-parks/issues"
   },
-  "homepage": "https://github.com/weswhitney/denver-parks#readme",
-  "dependencies": {
-    "consolidate": "^0.15.0",
-    "express": "^4.16.2",
-    "material-ui": "^0.20.0",
-    "mongodb": "^2.2.33",
-    "nunjucks": "^3.0.1",
-    "pug": "^2.0.0-rc.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1"
-  }
+  "homepage": "https://github.com/weswhitney/denver-parks#readme"
 }
