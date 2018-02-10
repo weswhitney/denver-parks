@@ -4,3 +4,4 @@ node_modules
 ./clinet/node_modules
 npm-debug.log
 idea/
+.idea
