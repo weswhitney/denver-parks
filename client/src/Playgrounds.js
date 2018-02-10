@@ -31,9 +31,6 @@ class Playgrounds extends Component {
         return (
             <div>
                 <ul>
-                    {/*for (item in this.state.jsonResponse) {*/}
-                    {/*<li key={item.id}>{item.LOCATION}</li>*/}
-                    {/*}*/}
                     {this.state.playgrounds.map(item=><li key={item.id}>{item.LOCATION}</li>)}
                 </ul>
             </div>
