@@ -6,7 +6,6 @@ class Skateparks extends Component {
         super(props);
         this.state = {
             skateparks: [],
-            name: 'wes'
         };
     }
     componentDidMount() {
@@ -19,7 +18,6 @@ class Skateparks extends Component {
         ).then(response => {
             if (response.ok) {
                 response.json().then(json => {
-                    console.log(json.skateParks);
                     this.setState({skateparks: json.skateParks});
                 });
             }
@@ -27,11 +25,10 @@ class Skateparks extends Component {
 
     }
     render() {
-        console.log("name " + this.state.name + " skateparks : " + this.state.skateparks);
         return (
             <div>
                 <ul>
-                    {this.state.skateparks.map(item=><li key={item.id}>{item.LOCATION}</li>)}
+                    {this.state.skateparks.map(item=><li key={item._id}>{item.LOCATION}</li>)}
                 </ul>
             </div>
         );
