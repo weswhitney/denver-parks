@@ -24,7 +24,6 @@ class Playgrounds extends Component {
                 });
             }
         });
-
     }
     render() {
         console.log("name " + this.state.name + " playgrounds : " + this.state.playgrounds);
