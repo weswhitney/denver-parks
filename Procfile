@@ -1,1 +1,1 @@
-web: "concurrently \"npm run build\" \"npm run client\""
+web: npm run build &&  npm run client
