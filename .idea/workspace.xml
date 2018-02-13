@@ -19,11 +19,31 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
                   <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="65" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Procfile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -158,20 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="denver-parks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="denver-parks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="denver-parks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -603,12 +609,12 @@
       <workItem from="1515612015094" duration="5566000" />
       <workItem from="1516079006808" duration="10994000" />
       <workItem from="1517450516413" duration="46691000" />
-      <workItem from="1518138796022" duration="14312000" />
+      <workItem from="1518138796022" duration="14681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94926000" />
+    <option name="totallyTimeSpent" value="95295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
@@ -825,22 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -861,10 +851,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
           <folding />
         </state>
       </provider>
