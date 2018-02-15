@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f3e6965-49a7-4ae2-b964-05f1970573a4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Playgrounds.js" afterPath="$PROJECT_DIR$/client/src/Playgrounds.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Skateparks.js" afterPath="$PROJECT_DIR$/client/src/Skateparks.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +20,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Playgrounds.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Playgrounds.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/Playgrounds.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="165">
-                  <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+                  <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -31,11 +32,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Skateparks.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Skateparks.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/Skateparks.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="165">
-                  <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+                  <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -204,8 +205,8 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/client/.gitignore" />
         <option value="$PROJECT_DIR$/Procfile.dev" />
-        <option value="$PROJECT_DIR$/client/src/Playgrounds.js" />
         <option value="$PROJECT_DIR$/client/src/Skateparks.js" />
+        <option value="$PROJECT_DIR$/client/src/Playgrounds.js" />
       </list>
     </option>
   </component>
@@ -711,12 +712,12 @@
       <workItem from="1515612015094" duration="5566000" />
       <workItem from="1516079006808" duration="10994000" />
       <workItem from="1517450516413" duration="46691000" />
-      <workItem from="1518138796022" duration="18162000" />
+      <workItem from="1518138796022" duration="18352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98776000" />
+    <option name="totallyTimeSpent" value="98966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="6" />
@@ -962,20 +963,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Playgrounds.js">
+    <entry file="file://$PROJECT_DIR$/client/src/Skateparks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Skateparks.js">
+    <entry file="file://$PROJECT_DIR$/client/src/Playgrounds.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
