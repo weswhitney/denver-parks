@@ -9,7 +9,7 @@ class Skateparks extends Component {
         };
     }
     componentDidMount() {
-        fetch('http://localhost:3001/skateparks', {
+        fetch('http://denver-parks-and-skateparks.herokuapp.com/skateparks', {
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',
