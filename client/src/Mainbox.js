@@ -7,16 +7,24 @@ class Mainbox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggledOn: 'playgrounds',
+            view: 'playgrounds',
+
         };
     }
     render() {
-        return (
-            <div>
-                <Playgrounds />
-                <Skateparks/>
-            </div>
-        );
+        if (this.state.view === 'playgrounds') {
+            return (
+                <div>
+                    <Playgrounds/>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <Skateparks/>
+                </div>
+            );
+        }
     }
 }
 
