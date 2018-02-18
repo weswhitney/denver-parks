@@ -26,7 +26,7 @@ class Mainbox extends Component {
         if (this.state.view === 'skateparks') {
             return (
                 <div>
-                    <NavButton handleClick={this.handleClick}/>
+                    <NavButton handleClick={this.handleClick} buttonName={'playgrounds'}/>
                     <div>
                         <Skateparks/>
                     </div>
@@ -35,7 +35,7 @@ class Mainbox extends Component {
         } else if (this.state.view === 'playgrounds') {
             return (
                 <div>
-                    <NavButton handleClick={this.handleClick}/>
+                    <NavButton handleClick={this.handleClick} buttonName={"skateparks"}/>
                     <div>
                         <Playgrounds/>
                     </div>
