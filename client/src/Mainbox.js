@@ -15,7 +15,12 @@ class Mainbox extends Component {
     }
     handleClick(e) {
         e.preventDefault();
-        this.setState({view: 'skateparks'});
+        // TODO make into switch statement when future sections are added.
+        if (this.state.view === 'playgrounds') {
+            this.setState({view: 'skateparks'});
+        } else if (this.state.view === 'skateparks') {
+            this.setState({view: 'playgrounds'});
+        }
     }
     render() {
         if (this.state.view === 'skateparks') {
@@ -23,7 +28,7 @@ class Mainbox extends Component {
                 <div>
                     <NavButton handleClick={this.handleClick}/>
                     <div>
-                        <Skateparks />
+                        <Skateparks/>
                     </div>
                 </div>
             )
