@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavButton from './NavButton.js';
 
 class Playgrounds extends Component {
     constructor(props) {
@@ -27,7 +26,6 @@ class Playgrounds extends Component {
     render() {
         return (
             <div>
-                <NavButton />
                 <ul>
                     {this.state.playgrounds.map(item=><li key={item._id}>{item.LOCATION}</li>)}
                 </ul>
