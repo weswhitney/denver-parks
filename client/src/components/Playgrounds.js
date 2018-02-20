@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 
-class Skateparks extends Component {
+class Playgrounds extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            skateparks: [],
+            playgrounds: [],
         };
     }
     componentDidMount() {
-        fetch('https://denver-parks-and-skateparks.herokuapp.com/skateparks', {
+        fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',
@@ -18,21 +18,20 @@ class Skateparks extends Component {
         ).then(response => {
             if (response.ok) {
                 response.json().then(json => {
-                    this.setState({skateparks: json.skateParks});
+                    this.setState({playgrounds: json.playgrounds});
                 });
             }
         });
-
     }
     render() {
         return (
             <div>
                 <ul>
-                    {this.state.skateparks.map(item=><li key={item._id}>{item.LOCATION}</li>)}
+                    {this.state.playgrounds.map(item=><li key={item._id}>{item.LOCATION}</li>)}
                 </ul>
             </div>
         );
     }
 }
 
-export default Skateparks;
+export default Playgrounds;
