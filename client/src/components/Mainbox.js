@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import Playgrounds from './Playgrounds.js';
 import Skateparks from'./Skateparks.js';
 import NavButton from './NavButton.js';
@@ -35,7 +35,7 @@ class Mainbox extends Component {
         } else if (this.state.view === 'playgrounds') {
             return (
                 <div>
-                    <NavButton handleClick={this.handleClick} buttonName={"skateparks"}/>
+                    <NavButton handleClick={this.handleClick} buttonName={'skateparks'}/>
                     <div>
                         <Playgrounds/>
                     </div>
