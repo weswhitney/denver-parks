@@ -1,1 +1,1 @@
-web: npm run serverchecktime
+web: npm run server
