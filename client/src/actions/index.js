@@ -1,7 +1,14 @@
+/*
+ * action types
+ */
 
 export const FETCH_SKATE_PARKS_LIST_REQUESTED = 'FETCH_SKATE_PARKS_LIST_REQUESTED'
 export const FETCH_SKATE_PARKS_LIST_SUCCEEDED = 'FETCH_SKATE_PARKS_LIST_SUCCEEDED'
 export const FETCH_SKATE_PARKS_LIST_FAILED = 'FETCH_SKATE_PARKS_LIST_FAILED'
+
+/*
+ * action creators
+ */
 
 export function fetchSkateParksList() {
     return {
