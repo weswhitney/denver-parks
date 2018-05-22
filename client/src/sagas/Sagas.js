@@ -11,8 +11,27 @@ export const fetchSkateParksApi = () => {
     ).then(response => response)
 }
 
+export const fetchPlaygroundsApi = () => {
+    return fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+            },
+        },
+    ).then(response => response)
+}
+
 // ES6 Generator function
 // worker Saga: will be fired on FETCH_SKATE_PARKS_LIST_REQUESTED actions
+function* fetchPlaygroundsGenerator(action) {
+    try {
+        const playgrounds = yield call(fetchPlaygroundsApi)
+        yield put(actions.fetchPlaygroundsListSucceeded(playgrounds.data))
+    } catch (e) {
+        yield put(actions.fetchPlaygroundsListFailed(e.message))
+    }
+}
+
 function* fetchSkateParksGenerator(action) {
     try {
         const skateParks = yield call(fetchSkateParksApi)
@@ -20,6 +39,10 @@ function* fetchSkateParksGenerator(action) {
     } catch (e) {
         yield put(actions.fetchSkateParksListFailed(e.message))
     }
+}
+
+function* watchFetchPlaygroundsList() {
+    yield takeLatest(actions.FETCH_PLAYGROUND_LIST_REQUESTED, fetchPlaygroundsGenerator)
 }
 
 function* watchFetchSkateParksList() {
@@ -35,6 +58,7 @@ function* watchFetchSkateParksList() {
 function* rootSaga() {
     yield all([
         fork(watchFetchSkateParksList),
+        fork(watchFetchPlaygroundsList)
     ])
 }
 

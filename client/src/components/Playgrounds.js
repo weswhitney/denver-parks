@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import * as actions from '../actions/index'
+
 import '../App.css';
 
 class Playgrounds extends Component {
@@ -9,6 +12,9 @@ class Playgrounds extends Component {
         };
     }
     componentDidMount() {
+        // const { dispatch } = this.props
+
+        // dispatch(actions.fetchPlaygroundsList())
         fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
                 method: 'GET',
                 headers: {
@@ -34,4 +40,12 @@ class Playgrounds extends Component {
     }
 }
 
-export default Playgrounds;
+function mapStateToProps(state) {
+    return {
+        playgrounds: state.items,
+    }
+}
+
+export default connect(mapStateToProps)(Playgrounds)
+
+// export default Playgrounds
