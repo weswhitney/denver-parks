@@ -10,12 +10,18 @@
  * 
  */
 import { combineReducers } from 'redux'
+
+/*
+ * The export parameters specify individual named exports, while the import * as name syntax imports all of them
+ * This inserts actions into the current scope,
+ * containing all the exports from the module in the file located in ../actions/index.
+ */
 import * as actions from '../actions/index'
 
 /* Reducers return new states */
 
 function requests(
-    state = {
+    state = { // default parameter for state
         isFetching: false,
         items: [],
     },
@@ -34,7 +40,20 @@ function requests(
         case actions.FETCH_SKATE_PARKS_LIST_FAILED:
             return { ...state, isFetching: false, }
 
-            case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
+        default:
+            return state
+    }
+}
+
+function playgroundRequests(
+    state = {
+        isFetching: false,
+        items: [],
+    },
+    action,
+) {
+    switch (action.type) {
+        case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
             return { ...state, isFetching: true, }
 
         case actions.FETCH_PLAYGROUND_LIST_SUCCEEDED:
@@ -46,36 +65,10 @@ function requests(
         case actions.FETCH_PLAYGROUND_LIST_FAILED:
             return { ...state, isFetching: false, }
 
-
         default:
             return state
     }
 }
-
-// function playgroundRequests(
-//     state = {
-//         isFetching: false,
-//         items: [],
-//     },
-//     action,
-// ) {
-//     switch (action.type) {
-//         case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
-//             return { ...state, isFetching: true, }
-
-//         case actions.FETCH_PLAYGROUND_LIST_SUCCEEDED:
-//             return { ...state,
-//                 items: action.data,
-//                 isFetching: false,
-//         }
-
-//         case actions.FETCH_PLAYGROUND_LIST_FAILED:
-//             return { ...state, isFetching: false, }
-
-//         default:
-//             return state
-//     }
-// }
 
 
 function parksReducer(state = {}, action) {
@@ -83,29 +76,26 @@ function parksReducer(state = {}, action) {
         case actions.FETCH_SKATE_PARKS_LIST_REQUESTED:
         case actions.FETCH_SKATE_PARKS_LIST_SUCCEEDED:
         case actions.FETCH_SKATE_PARKS_LIST_FAILED:
-        case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
-        case actions.FETCH_PLAYGROUND_LIST_SUCCEEDED:
-        case actions.FETCH_PLAYGROUND_LIST_FAILED:
             return Object.assign({}, state, requests(state, action))
         default:
             return state
     }
 }
 
-// function playgroundsReducer(state = {}, action) {
-//     switch (action.type) {
-//         case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
-//         case actions.FETCH_PLAYGROUND_LIST_SUCCEEDED:
-//         case actions.FETCH_PLAYGROUND_LIST_FAILED:
-//             return Object.assign({}, state, playgroundRequests(state, action))
-//         default:
-//             return state
-//     }
-// }
+function playgroundsReducer(state = {}, action) {
+    switch (action.type) {
+        case actions.FETCH_PLAYGROUND_LIST_REQUESTED:
+        case actions.FETCH_PLAYGROUND_LIST_SUCCEEDED:
+        case actions.FETCH_PLAYGROUND_LIST_FAILED:
+            return Object.assign({}, state, playgroundRequests(state, action))
+        default:
+            return state
+    }
+}
 
 const rootReducer = combineReducers({
     parksReducer,
-    // playgroundsReducer
+    playgroundsReducer
 })
 
 export default rootReducer

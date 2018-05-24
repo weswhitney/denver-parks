@@ -12,22 +12,22 @@ class Playgrounds extends Component {
         };
     }
     componentDidMount() {
-        // const { dispatch } = this.props
+        const { dispatch } = this.props
 
-        // dispatch(actions.fetchPlaygroundsList())
-        fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                },
-            },
-        ).then(response => {
-            if (response.ok) {
-                response.json().then(json => {
-                    this.setState({playgrounds: json.playgrounds});
-                });
-            }
-        });
+        dispatch(actions.fetchPlaygroundsList())
+        // fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
+        //         method: 'GET',
+        //         headers: {
+        //             Accept: 'application/json',
+        //         },
+        //     },
+        // ).then(response => {
+        //     if (response.ok) {
+        //         response.json().then(json => {
+        //             this.setState({playgrounds: json.playgrounds});
+        //         });
+        //     }
+        // });
     }
     render() {
         return (
@@ -41,6 +41,7 @@ class Playgrounds extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log("state ", state);
     return {
         playgrounds: state.items,
     }
