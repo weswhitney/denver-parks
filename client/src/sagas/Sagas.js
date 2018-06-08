@@ -18,7 +18,7 @@ export const fetchPlaygroundsApi = () => {
                 Accept: 'application/json',
             },
         },
-    ).then(response => response)
+    ).then(response => response.json())
 }
 
 // ES6 Generator function
@@ -26,7 +26,8 @@ export const fetchPlaygroundsApi = () => {
 function* fetchPlaygroundsGenerator(action) {
     try {
         const playgrounds = yield call(fetchPlaygroundsApi)
-        yield put(actions.fetchPlaygroundsListSucceeded(playgrounds.data))
+        // console.log('playgrounds.playgrounds ', playgrounds)
+        yield put(actions.fetchPlaygroundsListSucceeded(playgrounds.playgrounds))
     } catch (e) {
         yield put(actions.fetchPlaygroundsListFailed(e.message))
     }
@@ -50,11 +51,12 @@ function* watchFetchSkateParksList() {
 }
 
 /*
- TakeLatest does not allow concurrent fetches. If request gets
- dispatched while a fetch is already pending, that pending fetch is cancelled
- and only the latest one will be run.
+ * TakeLatest does not allow concurrent fetches. If request gets
+ * dispatched while a fetch is already pending, that pending fetch is cancelled
+ * and only the latest one will be run.
+ * 
+ * ES6 Generator function
  */
-// ES6 Generator function
 function* rootSaga() {
     yield all([
         fork(watchFetchSkateParksList),

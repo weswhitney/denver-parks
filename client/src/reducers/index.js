@@ -1,6 +1,15 @@
 /*
+ * 
+ * Redux/Sagas comments:
+ * 
+ * REDUCERS MUST BE PURE FUNCTIONS!!!
+ * 
+ * responsible for updating the state.
+ * 
  * Reducers specify how the application's state changes in response to actions
  * 
+ * 
+ * ES6 comments:
  * The import statement is used to import bindings which are exported by another module.
  * Imported modules are in strict mode whether you declare them as such or not.
  * 
@@ -20,6 +29,7 @@ import * as actions from '../actions/index'
 
 /* Reducers return new states */
 
+// function requests(state, action) { return x };
 function requests(
     state = { // default parameter for state
         isFetching: false,

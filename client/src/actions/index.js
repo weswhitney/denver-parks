@@ -1,7 +1,15 @@
 /*
- * action types
+ *
+ * Redux/Sagas comments:
+ * 
+ * Action objects say this is what we want changed, and this is the value we want it changed to.
+ * 
+ *  action types:
  * Actions only describe what happened, but don't describe how the application's state changes
  * 
+ * 
+ * 
+ * ES6 comments
  * 
  * The export statement is used when creating JavaScript modules to export this primitive string from the module
  * so they can be used by other programs with the import statement.
@@ -56,6 +64,7 @@ export function fetchPlaygroundsList() {
 }
 
 export function fetchPlaygroundsListSucceeded(data) {
+    // console.log('playground success ', data)
     return {
         type: FETCH_PLAYGROUND_LIST_SUCCEEDED, data: data
     }
