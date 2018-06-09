@@ -7,7 +7,7 @@ class Skateparks extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            skateparks: [],
+            skateparks: this.props.skateparks || [],
         };
     }
     componentDidMount() {
@@ -15,21 +15,6 @@ class Skateparks extends Component {
         // Use redux saga to load data
         // Will call mapStateToProps once data is loaded
         dispatch(actions.fetchSkateParksList())
-
-        // fetch('https://denver-parks-and-skateparks.herokuapp.com/skateparks', {
-        //         method: 'GET',
-        //         headers: {
-        //             Accept: 'application/json',
-        //         },
-        //     },
-        // ).then(response => {
-        //     if (response.ok) {
-        //         response.json().then(json => {
-        //             this.setState({skateparks: json.skateParks});
-        //         });
-        //     }
-        // });
-
     }
     render() {
         return (
@@ -43,8 +28,10 @@ class Skateparks extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log("---------------");
+    console.log("skateparks current state:", state);
     return {
-        skateparks: state.items,
+        skateparks: state.parksReducer.items,
     }
 }
 

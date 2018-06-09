@@ -8,18 +8,42 @@ export const fetchSkateParksApi = () => {
                 Accept: 'application/json',
             },
         },
-    ).then(response => response)
+    ).then(response => response.json())
+}
+
+export const fetchPlaygroundsApi = () => {
+    return fetch('https://denver-parks-and-skateparks.herokuapp.com/playgrounds', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+            },
+        },
+    ).then(response => response.json())
 }
 
 // ES6 Generator function
 // worker Saga: will be fired on FETCH_SKATE_PARKS_LIST_REQUESTED actions
+function* fetchPlaygroundsGenerator(action) {
+    try {
+        const playgrounds = yield call(fetchPlaygroundsApi)
+        console.log('playgrounds.playgrounds in Saga.js ', playgrounds.playgrounds)
+        yield put(actions.fetchPlaygroundsListSucceeded(playgrounds.playgrounds))
+    } catch (e) {
+        yield put(actions.fetchPlaygroundsListFailed(e.message))
+    }
+}
+
 function* fetchSkateParksGenerator(action) {
     try {
         const skateParks = yield call(fetchSkateParksApi)
-        yield put(actions.fetchSkateParksListSucceded(skateParks.data))
+        yield put(actions.fetchSkateParksListSucceded(skateParks.skateParks))
     } catch (e) {
         yield put(actions.fetchSkateParksListFailed(e.message))
     }
+}
+
+function* watchFetchPlaygroundsList() {
+    yield takeLatest(actions.FETCH_PLAYGROUND_LIST_REQUESTED, fetchPlaygroundsGenerator)
 }
 
 function* watchFetchSkateParksList() {
@@ -27,14 +51,16 @@ function* watchFetchSkateParksList() {
 }
 
 /*
- TakeLatest does not allow concurrent fetches. If request gets
- dispatched while a fetch is already pending, that pending fetch is cancelled
- and only the latest one will be run.
+ * TakeLatest does not allow concurrent fetches. If request gets
+ * dispatched while a fetch is already pending, that pending fetch is cancelled
+ * and only the latest one will be run.
+ * 
+ * ES6 Generator function
  */
-// ES6 Generator function
 function* rootSaga() {
     yield all([
         fork(watchFetchSkateParksList),
+        fork(watchFetchPlaygroundsList)
     ])
 }
 
