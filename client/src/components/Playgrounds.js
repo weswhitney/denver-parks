@@ -9,7 +9,7 @@ class Playgrounds extends Component {
         super(props);
         console.log('playground props ', props);
         this.state = {
-            playgrounds: [],
+            playgrounds: this.props.playgrounds || [], // need to get the state updated from empty array to the array of items.
         };
     }
     componentDidMount() {
@@ -23,6 +23,8 @@ console.log('action.fetchPlaygrounds() ', actions.fetchPlaygroundsList())
             <div>
                 <ul>
                     {console.log('this.state in render ', this.state)}
+                    {console.log('this.props in render ', this.props.playgrounds)}
+                    {console.log('this.props in render ', typeof this.props.playgrounds)}
                     {this.state.playgrounds.map(item=><li key={item._id}>{item.LOCATION}</li>)}
                 </ul>
             </div>
@@ -33,8 +35,9 @@ console.log('action.fetchPlaygrounds() ', actions.fetchPlaygroundsList())
 function mapStateToProps(state) {
     console.log("---------------");
     console.log("playground current state:", state);
+    console.log("state.playgroundsReducer.items :", state.playgroundsReducer.items);
     return {
-        playgrounds: state.items,
+        playgrounds: state.playgroundsReducer.items,
     }
 }
                     

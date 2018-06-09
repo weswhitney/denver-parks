@@ -8,7 +8,7 @@ export const fetchSkateParksApi = () => {
                 Accept: 'application/json',
             },
         },
-    ).then(response => response)
+    ).then(response => response.json())
 }
 
 export const fetchPlaygroundsApi = () => {
@@ -26,7 +26,7 @@ export const fetchPlaygroundsApi = () => {
 function* fetchPlaygroundsGenerator(action) {
     try {
         const playgrounds = yield call(fetchPlaygroundsApi)
-        // console.log('playgrounds.playgrounds ', playgrounds)
+        console.log('playgrounds.playgrounds in Saga.js ', playgrounds.playgrounds)
         yield put(actions.fetchPlaygroundsListSucceeded(playgrounds.playgrounds))
     } catch (e) {
         yield put(actions.fetchPlaygroundsListFailed(e.message))
@@ -36,7 +36,7 @@ function* fetchPlaygroundsGenerator(action) {
 function* fetchSkateParksGenerator(action) {
     try {
         const skateParks = yield call(fetchSkateParksApi)
-        yield put(actions.fetchSkateParksListSucceded(skateParks.data))
+        yield put(actions.fetchSkateParksListSucceded(skateParks.skateParks))
     } catch (e) {
         yield put(actions.fetchSkateParksListFailed(e.message))
     }

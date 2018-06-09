@@ -64,7 +64,7 @@ export function fetchPlaygroundsList() {
 }
 
 export function fetchPlaygroundsListSucceeded(data) {
-    // console.log('playground success ', data)
+    console.log('playground success in index.js | data ', data)
     return {
         type: FETCH_PLAYGROUND_LIST_SUCCEEDED, data: data
     }

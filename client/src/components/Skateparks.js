@@ -7,7 +7,7 @@ class Skateparks extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            skateparks: [],
+            skateparks: this.props.skateparks || [],
         };
     }
     componentDidMount() {
@@ -31,7 +31,7 @@ function mapStateToProps(state) {
     console.log("---------------");
     console.log("skateparks current state:", state);
     return {
-        skateparks: state.items,
+        skateparks: state.parksReducer.items,
     }
 }
 
