@@ -9,9 +9,17 @@ class Playgrounds extends Component {
     super(props);
     console.log('playground props ', props);
     this.state = {
-      playgrounds: this.props.playgrounds || [], // need to get the state updated from empty array to the array of items.
+      playgrounds: [],
     };
   }
+
+  componentWillReceiveProps = (newProps) => {
+    console.log("Playgrounds comp will receive props", newProps)
+    this.setState({
+        playgrounds: newProps.playgrounds
+    })
+
+}
 
   componentDidMount() {
     const { dispatch } = this.props;
@@ -23,17 +31,17 @@ class Playgrounds extends Component {
   render() {
     return (
       <div>
-            <ul>
-                {console.log('this.state in render ', this.state)}
-                {console.log('this.props in render ', this.props.playgrounds)}
-                {console.log('this.props in render ', typeof this.props.playgrounds)}
-                {this.state.playgrounds.map(item => (
-<li key={item._id}>
-{item.LOCATION}
-</li>
-))}
-              </ul>
-          </div>
+        <ul>
+          {console.log('this.state in render ', this.state)}
+          {console.log('this.props in render ', this.props.playgrounds)}
+          {console.log('this.props in render ', typeof this.props.playgrounds)}
+          {this.state.playgrounds.map(item => (
+            <li key={item._id}>
+              {item.LOCATION}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 }
