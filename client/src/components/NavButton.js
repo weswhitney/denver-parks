@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Button from '@material-ui/core/Button';
+
 
 class NavButton extends Component {
   render() {
     return (
-      <button onClick={this.props.handleClick}>
+      <Button onClick={this.props.handleClick}>
         {this.props.buttonName}
-      </button>
+      </Button>
     );
   }
 }
