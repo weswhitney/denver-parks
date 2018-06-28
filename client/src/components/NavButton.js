@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 class NavButton extends Component {
   render() {
     return (
-      <Button onClick={this.props.handleClick}>
+      <Button onClick={this.props.handleClick} variant="contained" color="primary">
         {this.props.buttonName}
       </Button>
     );
