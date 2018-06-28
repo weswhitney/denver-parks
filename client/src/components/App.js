@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Mainbox from './Mainbox.js';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { CssBaseline } from '@material-ui/core';
+import Mainbox from './Mainbox';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+        <div className="App">
+        <CssBaseline />
           <Mainbox />
-      </div>
+        </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-
-    return {
-        items: state.parksReducer.items,
-    }
+  return {
+    items: state.parksReducer.items,
+  };
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);
