@@ -4,23 +4,21 @@ import { connect } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+// import Grid from '@material-ui/core/Grid';
 import Mainbox from './Mainbox';
+import SimpleAppBar from './SimpleAppBar';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: blue,
-  },
-});
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
+      <MuiThemeProvider>
+        <CssBaseline />
         <div className="App">
-        <CssBaseline>
+            <SimpleAppBar title="tester"/>
           <Mainbox />
-        </CssBaseline>
         </div>
       </MuiThemeProvider>
     );
