@@ -11,6 +11,7 @@ import rootReducer from './reducers/index';
 import rootSaga from './sagas/Sagas';
 import 'regenerator-runtime/runtime';
 import registerServiceWorker from './registerServiceWorker';
+import Grid from '@material-ui/core/Grid';
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
