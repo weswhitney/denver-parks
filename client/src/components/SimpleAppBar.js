@@ -18,7 +18,7 @@ function SimpleAppBar(props) {
       <AppBar position="static" color="default">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            Title
+            Denver Parks and Skateparks
           </Typography>
         </Toolbar>
       </AppBar>
