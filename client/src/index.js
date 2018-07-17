@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Provider } from 'react-redux';
 // create a Saga middleware with a list of Sagas to run
 // connect the Saga middleware to the Redux store

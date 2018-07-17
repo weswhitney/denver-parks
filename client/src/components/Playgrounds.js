@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/index';
 
-import '../App.css';
-
 class Playgrounds extends Component {
   constructor(props) {
     super(props);

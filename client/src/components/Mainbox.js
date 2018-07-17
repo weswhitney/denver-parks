@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import Playgrounds from './Playgrounds';
 import Skateparks from './Skateparks';
 import NavButton from './NavButton';

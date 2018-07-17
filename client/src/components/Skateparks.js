@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import { connect } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import * as actions from '../actions/index';
