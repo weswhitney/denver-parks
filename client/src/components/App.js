@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import '../App.css';
 import { connect } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
-// import Grid from '@material-ui/core/Grid';
 import Mainbox from './Mainbox';
 import SimpleAppBar from './SimpleAppBar';
 
