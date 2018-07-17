@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Playgrounds from './Playgrounds';
 import Skateparks from './Skateparks';
 import NavButton from './NavButton';
+import SimpleAppBar from './SimpleAppBar';
 
 class Mainbox extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Mainbox extends Component {
     if (this.state.view === 'skateparks') {
       return (
         <div>
+        <SimpleAppBar title="tester"/>
           <NavButton handleClick={this.handleClick} buttonName="playgrounds" />
           <div>
             <Skateparks />
@@ -35,6 +37,7 @@ class Mainbox extends Component {
     } if (this.state.view === 'playgrounds') {
       return (
         <div>
+        <SimpleAppBar title="tester"/>
           <NavButton handleClick={this.handleClick} buttonName="skateparks" />
           <div>
             <Playgrounds />

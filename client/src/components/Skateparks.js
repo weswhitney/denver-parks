@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
 import * as actions from '../actions/index';
 
 class Skateparks extends Component {
@@ -29,7 +28,6 @@ class Skateparks extends Component {
   render() {
     return (
       <div>
-        <Grid item xs={12}>
         <ul>
           {this.state.skateparks.map(item => (
             <li key={item._id}>
@@ -39,7 +37,6 @@ class Skateparks extends Component {
             </li>
           ))}
         </ul>
-        </Grid>
       </div>
     );
   }
