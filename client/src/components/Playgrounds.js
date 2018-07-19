@@ -5,7 +5,6 @@ import * as actions from '../actions/index';
 class Playgrounds extends Component {
   constructor(props) {
     super(props);
-    console.log('playground props ', props);
     this.state = {
       playgrounds: [],
     };
@@ -21,8 +20,6 @@ class Playgrounds extends Component {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    console.log('this.props: ', this.props);
-    console.log('action.fetchPlaygrounds() ', actions.fetchPlaygroundsList());
     dispatch(actions.fetchPlaygroundsList());
   }
 
@@ -30,9 +27,6 @@ class Playgrounds extends Component {
     return (
       <div>
         <ul>
-          {console.log('this.state in render ', this.state)}
-          {console.log('this.props in render ', this.props.playgrounds)}
-          {console.log('this.props in render ', typeof this.props.playgrounds)}
           {this.state.playgrounds.map(item => (
             <li key={item._id}>
               {item.LOCATION}
@@ -45,9 +39,6 @@ class Playgrounds extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('---------------');
-  console.log('playground current state:', state);
-  console.log('state.playgroundsReducer.items :', state.playgroundsReducer.items);
   return {
     playgrounds: state.playgroundsReducer.items,
   };
