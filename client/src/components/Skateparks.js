@@ -43,8 +43,6 @@ class Skateparks extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('---------------');
-  console.log('skateparks current state:', state);
   return {
     skateparks: state.parksReducer.items,
   };
