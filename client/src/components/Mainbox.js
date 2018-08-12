@@ -14,17 +14,19 @@ class Mainbox extends Component {
   }
 
   handleClick(e) {
+    const { view } = this.state;
     e.preventDefault();
     // TODO make into switch statement when future sections are added.
-    if (this.state.view === 'playgrounds') {
+    if (view === 'playgrounds') {
       this.setState({ view: 'skateparks' });
-    } else if (this.state.view === 'skateparks') {
+    } else if (view === 'skateparks') {
       this.setState({ view: 'playgrounds' });
     }
   }
 
   render() {
-    if (this.state.view === 'skateparks') {
+    const { view } = this.state;
+    if (view === 'skateparks') {
       return (
         <div>
           <SimpleAppBar />
@@ -34,7 +36,7 @@ class Mainbox extends Component {
           </div>
         </div>
       );
-    } if (this.state.view === 'playgrounds') {
+    } if (view === 'playgrounds') {
       return (
         <div>
           <SimpleAppBar />

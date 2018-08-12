@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/index';
+import PropTypes from 'prop-types';
 
 class Playgrounds extends Component {
   constructor(props) {
@@ -10,17 +11,17 @@ class Playgrounds extends Component {
     };
   }
 
-  componentWillReceiveProps = (newProps) => {
-    console.log("Playgrounds comp will receive props", newProps)
-    this.setState({
-        playgrounds: newProps.playgrounds
-    })
-
-}
 
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(actions.fetchPlaygroundsList());
+  }
+
+  componentWillReceiveProps = (newProps) => {
+    // so i can set the state on load?
+    this.setState({
+      playgrounds: newProps.playgrounds,
+    });
   }
 
   render() {
@@ -44,5 +45,16 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Playgrounds); // connect returns a function that calls mapStateToProps that returns a value still boxed up in a function that will call the next argument passed, if passed the mapping function take the entire state tree line 44 and pass it into the mapstatetoprops function, and then pull off what you want
+Playgrounds.propTypes = {
+  dispatch: PropTypes.func,
+};
+
+Playgrounds.defaultProps = {
+  dispatch: null,
+};
+// connect returns a function that calls mapStateToProps
+// that returns a value still boxed up in a function that will call the next argument passed,
+// if passed the mapping function take the entire state tree line 44 and pass it into the mapstatetoprops function,
+// and then pull off what you want
+export default connect(mapStateToProps)(Playgrounds);
 //                      currying ^^^
